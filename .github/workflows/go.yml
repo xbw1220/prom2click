@@ -21,11 +21,13 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Get dependencies
-      run: make get-deps
+    - name: Go Build
+      run: CGO_ENABLED=0  go build -ldflags "-X main.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X main.VersionPrerelease=DEV" -o bin/prom2click
 
-    - name: Build
-      run: make build
+    - name: test
+      run: |
+        cp /go/src/github.com/iyacontrol/bin/prom2click /usr/local/bin/prom2click
+        chmod +x /usr/local/bin/prom2click
     
     - name: Test
-      run: ./bin/prom2click
+      run: /usr/local/bin/prom2click
