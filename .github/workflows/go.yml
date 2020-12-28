@@ -25,7 +25,7 @@ jobs:
       run: |
         go get -v github.com/Masterminds/glide
         make get-deps
-        ls -l
+        find . -name "prom2click"
         
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@master
