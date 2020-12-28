@@ -23,11 +23,8 @@ jobs:
 
     - name: Go-build
       run: |
-        go env
         go get -v github.com/Masterminds/glide
         go install github.com/Masterminds/glide
-        ls -l /home/runner/go/src/github.com/Masterminds
-        ls -l /opt/hostedtoolcache/go/1.15.6/x64/src
         make get-deps
         make build
         
