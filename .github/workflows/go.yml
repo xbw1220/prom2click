@@ -25,7 +25,7 @@ jobs:
       run: |
         go get -v github.com/Masterminds/glide
         make get-deps
-        ls -l 
+        ls -l /opt/hostedtoolcache/go/1.15.6/x64/
         
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@master
