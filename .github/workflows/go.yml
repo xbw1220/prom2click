@@ -26,6 +26,7 @@ jobs:
         go env
         go get -v github.com/Masterminds/glide
         pwd
+        ls -l $GOPATH/
         make get-deps
         make build
         
