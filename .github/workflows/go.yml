@@ -26,6 +26,8 @@ jobs:
         go get -v github.com/Masterminds/glide
         make get-deps
         ls -l 
+        apt update -y 
+        apt install -y find
         find . -name "prom2click"
         
 #     - name: Upload artifact
