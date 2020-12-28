@@ -25,7 +25,7 @@ jobs:
       run: |
         go env
         go get -v github.com/Masterminds/glide
-        ls -l /home/runner/go
+        ls -l /home/runner/go/src
         ls -l /opt/hostedtoolcache/go/1.15.6/x64/src
         export GOPATH="/home/runner/go"
         make get-deps
