@@ -23,6 +23,7 @@ jobs:
 
     - name: Go-build
       run: |
+        go env
         go get -v github.com/Masterminds/glide
         sudo apt update -y 
         sudo apt install -y make 
