@@ -25,8 +25,7 @@ jobs:
       run: |
         go env
         go get -v github.com/Masterminds/glide
-        sudo apt update -y 
-        sudo apt install -y make 
+        pwd
         make get-deps
         make build
         
