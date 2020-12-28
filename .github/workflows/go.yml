@@ -27,8 +27,7 @@ jobs:
         sudo apt update -y 
         sudo apt install -y make 
         make get-deps
-        echo $GOPATH
-        ls -l $GOPATH/
+        make build
         
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@master
