@@ -24,10 +24,11 @@ jobs:
     - name: Go-build
       run: |
         go get -v github.com/Masterminds/glide
-        ls -l 
         sudo apt update -y 
         sudo apt install -y make 
         make get-deps
+        echo $GOPATH
+        ls -l $GOPATH/
         
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@master
