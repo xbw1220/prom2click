@@ -25,8 +25,8 @@ jobs:
       run: |
         go env
         go get -v github.com/Masterminds/glide
-        pwd
-        export GOPATH="${PWD}"
+        ls -l /home/runner/go
+        export GOPATH="/home/runner/go"
         make get-deps
         make build
         
