@@ -24,11 +24,10 @@ jobs:
     - name: Go-build
       run: |
         go get -v github.com/Masterminds/glide
-        make get-deps
         ls -l 
-        apt update -y 
-        apt install -y find
-        find . -name "prom2click"
+        sudo apt update -y 
+        sudo apt install -y make 
+        make get-deps
         
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@master
